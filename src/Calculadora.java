@@ -35,13 +35,21 @@ public class Calculadora
 		
 		
 	}
-
-	//Metodo para dividir, almacenara el resultado en la variable resultado
-    //los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
-	public void dividir() 
+	
+	/**
+	 * @throws Exception si el segundo número (divisor) es cero.
+	 * 
+	 * Metodo para dividir, almacenara el resultado en la variable resultado
+	 * los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
+     */
+	public void dividir() throws Exception 
 	{
-		
-		
+		if(num2 != 0) 
+		{
+			resultado = num1 / num2;
+			mostrarDatos();
+		} 
+		else throw new Exception("No se puede dividir por 0");
 	}
 
 	//Metodo para multiplicar, almacenara el resultado en la variable resultado
