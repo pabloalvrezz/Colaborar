@@ -1,61 +1,73 @@
 
 public class Calculadora 
 {
-	float resultado; //Variable en la que se almacenara el resultado de las operaciones
-	float num1,num2; //Variables que usaremos para almacenar los numeros introducidos por el usuario
-	
-	/**
-	 * Constructor de la clase que usaremos para inicilizar las variables en la que almacenaremos los numeros
-	 * @param num1
-	 * @param num2
-	 */
-	public Calculadora(float num1, float num2)
+	private float resultado; //Variable en la que se almacenara el resultado de las operaciones
+	private float num1,num2; //Variables que usaremos para almacenar los numeros introducidos por el usuario
+
+	//Getter para obtener el resultado
+	public float getResultado() 
 	{
-		this.num1 = num1;
-		this.num2 = num2;
+		return resultado;
+	}
+
+	//Getter para obtener el primer valor
+	public float getNum1()
+	{
+		return num1;
 	}
 	
+	//Getter para obtener el segundo valor
+	public float getNum2()
+	{
+		return num2;
+	}
 	
-
-    // Método para introducir datos
+	//Metodo que se llamara en el naim, sacara un mensaje por pantalla
+	//y cambiara el valor de num1 y num2 
     public void introducirDatos() 
     {
        
     }
 
-    // Método para mostrar datos
+    //Metodo que mostrara un mensaje por pantalla que mostrara el resultado
+    //de la operacion de los dos numeros
     public void mostrarDatos() 
     {
         
     }
 
-
-
-	public void sumar() {
-		// TODO Auto-generated method stub
+    //Metodo para sumar, almacenara el resultado en la variable resultado
+    //los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
+	public void sumar() 
+	{
+		
 		
 	}
 
-
-
-	public void restar() {
-		// TODO Auto-generated method stub
+	//Metodo para restar, almacenara el resultado en la variable resultado
+    //los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
+	public void restar() 
+	{
+		
 		
 	}
 
-
-
-	public void dividir() {
-		// TODO Auto-generated method stub
+	//Metodo para dividir, almacenara el resultado en la variable resultado
+    //los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
+	public void dividir() 
+	{
+		
 		
 	}
 
-
-
+	//Metodo para multiplicar, almacenara el resultado en la variable resultado
+    //los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
 	public void multiplicar() {
-		// TODO Auto-generated method stub
+	
 		
 	}
+
+	
 
 
 
