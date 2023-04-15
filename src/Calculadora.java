@@ -4,11 +4,26 @@ public class Calculadora
 	private float resultado; //Variable en la que se almacenara el resultado de las operaciones
 	private float num1, num2; //Variables que usaremos para almacenar los numeros introducidos por el usuario
 
-	//Metodo que se llamara en el main, sacara un mensaje por pantalla
-	//y cambiara el valor de num1 y num2 
-    public void introducirDatos() 
+	/**
+	 * Metodo que se llamara en el main, sacara un mensaje por pantalla
+	 *y cambiara el valor de num1 y num2 
+	 * @throws Se lanza una excepcion que recogera el programa principal si el valor introducido no es numerico.
+	 */
+    public void introducirDatos() throws Exception
     {
-       
+       try
+       {
+           System.out.print("Introduce el valor del primer operador: ");
+           num1 = Teclado.real();
+           
+           
+           System.out.print("\nIntroduce el valor del segundo operador: ");
+           num2 = Teclado.real();
+       }
+       catch(Exception e)
+       {
+    	   throw new Exception("El valor introducido debe ser numerico");
+       }
     }
 
     //Metodo que mostrara un mensaje por pantalla que mostrara el resultado
