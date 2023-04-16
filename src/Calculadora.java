@@ -6,7 +6,7 @@ public class Calculadora
 
 	/**
 	 * Metodo que se llamara en el main, sacara un mensaje por pantalla
-	 *y cambiara el valor de num1 y num2 
+	 * y cambiara el valor de num1 y num2 
 	 * @throws Se lanza una excepcion que recogera el programa principal si el valor introducido no es numerico.
 	 */
     public void introducirDatos() throws Exception
@@ -67,16 +67,47 @@ public class Calculadora
 		else throw new Exception("No se puede dividir por 0");
 	}
 
-	//Metodo para multiplicar, almacenara el resultado en la variable resultado
-    //los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
-	public void multiplicar() {
-	
+	/**
+	 * Método que multiplica {@code this.num1} por {@code this.num2}.
+	 * No tiene parámetros ni devuelve nada, así que el resultado es almacenado en {@code this.resultado}.
+	 * Para mostrar el resultado se llama al método {@code this.mostrarDatos()}.
+	 */
+	public void multiplicar()
+	{
+        int cantOperaciones = 0; // Almacena la cantidad de operaciones que se van a realizar
+		float multiplicando = 0; // Contiene el valor que va a ser usado como multiplicando
+		float decOperando; // Almacena los posibles decimales del operando
 		
+		// En el caso de que alguno de los operadores sea 0, se asignará 0 al resultado directamente.
+		if(this.num1 == 0 || this.num2 == 0)
+		{
+			this.resultado = 0;
+		}
+		else // Si no, se realizará la operación de multiplicación
+		{
+			decOperando = this.num2 - (int)this.num2; // Se almacenan los decimales
+            cantOperaciones = (int)this.num2; // Se almacenan la cantidad de operaciones
+            
+			// Se realiza la multiplicación
+			for(int i = 0; i < Math.abs(cantOperaciones); i++)
+			{
+				this.num2 = multiplicando;
+				this.resultado = this.num1 + this.num2;
+				multiplicando = this.resultado;
+			}
+            
+			// Se devuelve a this.num2 su valor original
+			this.num2 = cantOperaciones + decOperando;
+
+			// Se realiza la operacion restante si fuese necesario
+			this.resultado += this.num1 * Math.abs(decOperando);
+			
+			// Se pone this.resultado a negativo en el caso de que alguno de los operadores lo sea
+            if(!(this.num1 > 0 && this.num2 > 0) || (this.num1 < 0 && this.num2 < 0))
+                this.resultado = -this.resultado;
+		}
+
+		this.mostrarDatos();
 	}
-
-	
-
-
-
 	
 }
