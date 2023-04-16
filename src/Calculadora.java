@@ -26,11 +26,15 @@ public class Calculadora
        }
     }
 
-    //Metodo que mostrara un mensaje por pantalla que mostrara el resultado
-    //de la operacion de los dos numeros
+    /**
+    * Metodo que mostrara un mensaje por pantalla que mostrara el resultado
+    * de la operacion de los dos numeros
+    */
     public void mostrarDatos() 
     {
-
+    		
+    System.out.println("El resultado de la operacion del numero 1:" ,this.num1 ,"y del numero 2" , this.num2 , "es igual a" ,this.resultado);
+    	
     }
 
     /**
