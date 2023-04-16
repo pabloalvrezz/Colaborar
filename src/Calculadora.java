@@ -43,12 +43,14 @@ public class Calculadora
 		mostrarDatos();
 	}
 
-	//Metodo para restar, almacenara el resultado en la variable resultado
-    //los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
+    /**
+     * Metodo para resta, almacenara el resultado en la variable resultado
+     * los numeros usados seran num1 y num2. Se llamara al metodo mostrarDatos
+     */
 	public void restar() 
 	{
-		
-		
+		resultado = num1 - num2;
+		mostrarDatos();		
 	}
 	
 	/**
