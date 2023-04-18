@@ -114,7 +114,7 @@ public class Calculadora
 			for(int i = 0; i < Math.abs(cantOperaciones); i++)
 			{
 				this.num2 = multiplicando;
-				this.resultado = this.num1 + this.num2;
+				this.sumar();
 				multiplicando = this.resultado;
 			}
 
