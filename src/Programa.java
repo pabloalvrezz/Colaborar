@@ -18,9 +18,6 @@ public class Programa
 			//Pedimos los datos al usuario
 			calculadora.introducirDatos();
 
-			//Leemos los numeros mientras que la eleccion sea distinto de 9
-			//Se pedira la eleccion hasta que el numero sea valido
-
 			//Le pedimos al usuario que introduzca otro numero para elegir la operacion a realizar
 			System.out.println("Introduce el numero para elegir la operacion, 9 para salir\n"
 					+ "1. Sumar\n"
