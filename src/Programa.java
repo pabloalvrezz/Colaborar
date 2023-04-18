@@ -2,6 +2,7 @@
  * Clase programa que es utilizada para probar la clase calculadora
  * contiene un main el cual generara un menu de seleccion y pedira datos
  * para que se realice una operacion con ellos
+ * Autor: Pablo Álvarez
  * @param args
  */
 public class Programa 
